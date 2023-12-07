@@ -1,0 +1,173 @@
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #ffe6f2; /* Light Pink */
+}
+
+*::selection{
+  color: white;
+  background: #ff0080;
+}
+
+.main-container {
+  display: flex;
+  max-width: 800px;
+}
+
+.info-section {
+  background-color: #ffe6f2; /* Light Pink */
+  padding: 20px;
+  border-radius: 8px 0 0 8px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.info-section h2 {
+  color: #ff66b2; /* Lighter Pink */
+}
+
+.calculator-container {
+  background-color: #ffffff; /* White */
+  padding: 48px;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  transition: 0.5s all ease;
+  animation: shake 1s ease-in-out;
+}
+
+@keyframes bounce {
+  from, 20%, 50%, 80%, to {
+    transform: translateY(0);
+  }
+
+  40%, 60% {
+    transform: translateY(-20px);
+  }
+
+  70% {
+    transform: translateY(-10px);
+  }
+
+  90% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: #ff99cc; /* Pink */
+  }
+  50% {
+    color: #ff66b2; /* Lighter Pink */
+  }
+  100% {
+    color: #ff99cc; /* Pink */
+  }
+}
+
+.calculator-container:hover{
+    box-shadow: 5px 5px 25px #ff0080;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #ccc; /* Grey */
+  transition: border-color 0.3s ease-in-out;
+  transition: 0.5s;
+}
+
+input:hover {
+  border-color: #ff99cc; /* Pink */
+}
+
+button {
+  background-color: #ff99cc; /* Pink */
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #ff66b2; /* Lighter Pink */
+}
+
+.result-section {
+  text-align: center;
+}
+
+#result {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+#lovePercentage {
+  font-weight: bold;
+  color: #e74c3c; /* Red */
+}
+
+#imgo{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50px;
+    border-radius: 25px;
+    object-fit: cover;
+    object-position: 90%;
+    -webkit-mask-image: url("/s.png");
+    -webkit-mask-size: contain;
+    -webkit-mask-position: 0 215px;
+    animation: bounce 1s ease-in-out;
+}
+
+#special{
+  color: #ff0080;
+  transition: .5s all ease;
+}
+
+#special:hover{
+  text-decoration: underline;
+}
