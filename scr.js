@@ -4,24 +4,15 @@ function calculateLove() {
   
     let lovePercentage;
   
-    if (name1 === 'pratik' && name2 !== 'shravani') {
-      // Case: Pratik and someone other than Shravani
-      lovePercentage = 0;
-    } else if (name1 === 'pratik' && name2 === 'shravani') {
+    if (name1 === 'pratik' && name2 === 'shravani') {
       // Case: Pratik and Shravani
       lovePercentage = "💔";
-    } else if (name2 === 'pratik' && name1 !== 'shravani') {
-      // Case: Someone other than Shravani and Pratik
-      lovePercentage = "Don't match a randi with a SIGMA";
-    } else if (name2 !== 'pratik' && name1 === 'shravani') {
+    } if (name1 !== 'pratik' && name2 === 'pranjal') {
       // Case: Someone other than Shravani and Pratik
       lovePercentage = 0;
-    } else if (name1 !== 'pratik' && name2 === 'shravani') {
-      // Case: Someone other than Shravani and Pratik
-      lovePercentage = 0;
-    } else if (name2 === 'pratik' && name1 === 'shravani') {
+    } else if (name1 === 'pratik' && name2 === 'pranjal') {
       // Case: Shravani and Pratik
-      lovePercentage = "💔";
+      lovePercentage = "I tried, but she denied";
     } else {
       // For all other cases, use the hash function (you can replace this with a more sophisticated one)
       lovePercentage = hashFunction(name1 + name2);
